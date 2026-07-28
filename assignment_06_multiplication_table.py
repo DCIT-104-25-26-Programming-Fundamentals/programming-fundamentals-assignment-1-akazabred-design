@@ -55,3 +55,29 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def multiplication_table(num):
+    """
+    Generate and print the multiplication table for a given number.
+
+    Parameters:
+    num (int): The number for which to generate the multiplication table.
+    """
+    print(f"Multiplication Table for {num}:")
+    for i in range(1, 13):
+        product = num * i
+        print(f"{num} x {i} = {product}")
+
+def full_multiplication_table(n):
+    """
+    Generate and print the full multiplication table for numbers from 1 to n.
+
+    Parameters:
+    n (int): The upper limit for generating multiplication tables.
+    """
+    if n <= 0:
+        print("Please enter a positive integer.")
+        return
+
+    for num in range(1, n + 1):
+        multiplication_table(num)
+        print("---")

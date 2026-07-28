@@ -79,3 +79,49 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def add_task(tasks):
+    """
+    Prompt the user to enter a task description and add it to the tasks list.
+
+    Parameters:
+    tasks (list): The list of current tasks.
+    """
+    task = input("Enter task: ")
+    tasks.append(task)
+    print(f'Task added: "{task}"')
+
+def view_tasks(tasks):
+    """
+    Display all tasks currently in the list, numbered from 1.
+
+    Parameters:
+    tasks (list): The list of current tasks.
+    """
+    if not tasks:
+        print("Your Tasks: (none)")
+    else:
+        print("Your Tasks:")
+        for i, task in enumerate(tasks, start=1):
+            print(f" {i}. {task}")
+
+def delete_task(tasks):
+    """
+    Show the list of tasks with their numbers and ask the user which task to remove.
+
+    Parameters:
+    tasks (list): The list of current tasks.
+    """
+    if not tasks:
+        print("No tasks to delete.")
+        return
+
+    view_tasks(tasks)
+    try:
+        task_num = int(input("Enter task number to delete: "))
+        if 1 <= task_num <= len(tasks):
+            deleted_task = tasks.pop(task_num - 1)
+            print(f'Task "{deleted_task}" has been removed.')
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a valid number.")

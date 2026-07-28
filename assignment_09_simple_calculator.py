@@ -68,3 +68,86 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def add(a, b):
+    """
+    Perform addition of two numbers.
+
+    Parameters:
+    a (float): The first number.
+    b (float): The second number.
+
+    Returns:
+    float: The sum of a and b.
+    """
+    return a + b
+
+def subtract(a, b):
+    """
+    Perform subtraction of two numbers.
+
+    Parameters:
+    a (float): The first number.
+    b (float): The second number.
+
+    Returns:
+    float: The difference of a and b.
+    """
+    return a - b
+
+def multiply(a, b):
+    """
+    Perform multiplication of two numbers.
+
+    Parameters:
+    a (float): The first number.
+    b (float): The second number.
+
+    Returns:
+    float: The product of a and b.
+    """
+    return a * b
+
+def divide(a, b):
+    """
+    Perform division of two numbers.
+
+    Parameters:
+    a (float): The first number.
+    b (float): The second number.
+
+    Returns:
+    float: The quotient of a and b.
+
+    Raises:
+    ValueError: If the second number is zero.
+    """
+    if b == 0:
+        raise ValueError("Error: Cannot divide by zero.")
+    return a / b
+
+def modulus(a, b):
+    """
+    Perform modulus operation on two numbers.
+
+    Parameters:
+    a (float): The first number.
+    b (float): The second number.
+
+    Returns:
+    float: The remainder of a divided by b.
+    """
+    return a % b
+
+def power(a, b):
+    """
+    Perform exponentiation on two numbers.
+
+    Parameters:
+    a (float): The base.
+    b (float): The exponent.
+
+    Returns:
+=======
+    float: The result of a raised to the power of b.
+    """
+    return a ** b
