@@ -35,7 +35,36 @@
 #   number, print an error message and stop.
 #
 
-# =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
-# =============================================================================
+# =================================================================
 
+
+def sum_of_numbers(numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total
+
+def average_of_numbers(numbers):
+    total = sum_of_numbers(numbers)
+    count = len(numbers)
+    if count == 0:
+        return 0
+    return total / count
+
+def maximum_of_numbers(numbers):
+    if not numbers:
+        return None
+    max_num = numbers[0]
+    for n in numbers:
+        if n > max_num:
+            max_num = n
+    return max_num
+
+def minimum_of_numbers(numbers):
+    if not numbers:
+        return None
+    min_num = numbers[0]
+    for n in numbers:
+        if n < min_num:
+            min_num = n
+    return min_num

@@ -60,3 +60,26 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def transpose_matrix(matrix):
+    """
+    Transpose a given matrix (2D list).
+
+    Parameters:
+    matrix (list of list of int): The original matrix.
+
+    Returns:
+    list of list of int: The transposed matrix.
+    """
+    if not matrix or not matrix[0]:
+        return []
+    
+    rows = len(matrix)
+    cols = len(matrix[0])
+    
+    # Create a new matrix with swapped dimensions
+    transposed = [[0] * rows for _ in range(cols)]
+    for i in range(rows):
+        for j in range(cols):
+            transposed[j][i] = matrix[i][j]
+    
+    return transposed

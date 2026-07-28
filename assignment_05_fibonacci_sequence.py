@@ -49,3 +49,22 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def fibonacci_sequence(n):
+    """
+    Generate the first n terms of the Fibonacci sequence.
+
+    Parameters:
+    n (int): The number of terms to generate.
+
+    Returns:
+    list: A list containing the first n Fibonacci numbers.
+    """
+    if n <= 0:
+        return []
+    
+    sequence = [0, 1]
+    while len(sequence) < n:
+        next_term = sequence[-1] + sequence[-2]
+        sequence.append(next_term)
+    
+    return sequence[:n]

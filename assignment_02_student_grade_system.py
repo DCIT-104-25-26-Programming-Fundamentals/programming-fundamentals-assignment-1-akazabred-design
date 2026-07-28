@@ -66,3 +66,4 @@ def get_grade(score):
         return 'D'
     else:
         return 'F'
+        print(get_grade(score))
